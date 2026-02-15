@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background-color: #fce4ec;
+}
+#bar {
+  width: 100%;
+  background-color: #ddd;
+}
+#progress {
+  width: 100%;
+  height: 30px;
+  background-color: #ff5252;
+}
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<h2>Boyfriend Anger Level 😠</h2>
+
+<div id="bar">
+  <div id="progress"></div>
+</div>
+
+<button onclick="reduceAnger()">Calm Down ❤️</button>
+
+<p id="message"></p>
+
+<script>
+let width = 100;
+
+function reduceAnger() {
+  if (width > 0) {
+    width -= 20;
+    document.getElementById("progress").style.width = width + "%";
+  }
+  if (width <= 0) {
+    document.getElementById("message").innerHTML =
+      "Now can we talk peacefully? I miss you ❤️";
+  }
+}
+</script>
+
+</body>
+</html>
